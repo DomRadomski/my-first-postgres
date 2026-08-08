@@ -19,6 +19,10 @@ app.get("/", (req, res) => {
   res.send("Welcome to the homepage my driller")
 });
 
+// app.js
+const userRoutes = require("./routes/userRoutes");
+app.use("/", userRoutes);
+
 const PORT = 6969;
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
